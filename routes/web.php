@@ -14,11 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('home');
 });
 
 //Auth Admin
-Route::get('p', 'Auth\AdminController@LoginPage')->name('admin.login');
+Route::get('admin/login', 'Auth\AdminController@LoginPage')->name('admin.login');
+Route::post('admin/login', 'Auth\AdminController@Login')->name('admin.login');
+Route::get('admin/logout', 'Auth\AdminController@Logout')->name('admin.logout');
 
-//Auth User
-Route::get('user/register', 'Auth\UserController@RegisterPage')->name('user.register');
+//Admin
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('admin/profil', 'Admin\ProfilController@ProfilPage')->name('admin.profil');
+    Route::get('admin/dashboard', 'Admin\DashboardController@DashboardPage')->name('admin.dashboard');
+    Route::get('admin/data-produk', 'Admin\ProdukController@DataProdukPage')->name('admin.dataproduk');
+    Route::get('admin/data-varian', 'Admin\ProdukController@DataVarianPage')->name('admin.datavarian');
+    Route::get('admin/tambah-produk', 'Admin\ProdukController@TambahProdukPage')->name('admin.tambahproduk');
+    Route::get('admin/tambah-varian', 'Admin\ProdukController@TambahVarianPage')->name('admin.tambahvarian');
+    Route::get('admin/tambah-promosi', 'Admin\PromosiController@TambahPromosiPage')->name('admin.tambahpromosi');
+    Route::get('admin/data-promosi', 'Admin\PromosiController@DataPromosiPage')->name('admin.datapromosi');
+
+});
+
+
+//User
+Route::get('home', 'User\HomeController@HomePage')->name('home');
