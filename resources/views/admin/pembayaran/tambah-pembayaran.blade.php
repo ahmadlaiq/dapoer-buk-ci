@@ -3,11 +3,11 @@
 
 <section class="section">
     <div class="section-header">
-      <h1>Promosi</h1>
+      <h1>Metode Pembayaran</h1>
       <div class="section-header-breadcrumb">
         <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-        <div class="breadcrumb-item"><a href="#">Promosi</a></div>
-        <div class="breadcrumb-item">Tambah Promosi</div>
+        <div class="breadcrumb-item"><a href="#"> Metode Pembayaran</a></div>
+        <div class="breadcrumb-item">Tambah Metode Pembayaran</div>
       </div>
     </div>
 
@@ -21,7 +21,7 @@
         <div class="col-12 col-md-6 col-lg-12">
           <div class="card">
            <div class="card-header">
-              <h4>Silahkan Masukkan Data Promosi</h4>
+              <h4>Silahkan Masukkan Data Metode Pembayaran</h4>
             </div>
             <div class="card-body">
               <div class="alert alert-info">
@@ -30,11 +30,19 @@
               <form method="POST" action="{{ route('admin.login')}}" class="needs-validation" novalidate="">
                 @csrf
               <div class="form-group">
-                <label>Nama Promosi</label>
+                <label>Nama Metode Pembayaran</label>
                 <input type="text" class="form-control">
               </div>
               <div class="form-group">
-                <label>Banner Promosi</label>
+                <label>Jenis Akun</label>
+                <select class="form-control">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Gambar (Logo)</label>
                 <input type="file" class="form-control">
               </div>
               <div class="form-group">

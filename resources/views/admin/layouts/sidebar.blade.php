@@ -33,25 +33,25 @@
         <li class="dropdown">
           <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Pembayaran</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="layout-default.html">Tambah Pembayaran</a></li>
-            <li><a class="nav-link" href="layout-transparent.html">Data Pembayaran</a></li>
-            <li><a class="nav-link" href="layout-transparent.html">Tambah Jenis Akun</a></li>
-            <li><a class="nav-link" href="layout-transparent.html">Data Jenis Akun</a></li>
+            <li><a class="nav-link" href="{{route('admin.tambahpembayaran')}}">Tambah Pembayaran</a></li>
+            <li><a class="nav-link" href="{{route('admin.datapembayaran')}}">Data Pembayaran</a></li>
+            <li><a class="nav-link" href="{{route('admin.tambahjenisakun')}}">Tambah Jenis Akun</a></li>
+            <li><a class="nav-link" href="{{route('admin.datajenisakun')}}">Data Jenis Akun</a></li>
           </ul>
         </li>
         <li class="menu-header">Ongkir</li>
         <li class="dropdown">
           <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Ongkir</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="layout-default.html">Tambah Ongkir</a></li>
-            <li><a class="nav-link" href="layout-transparent.html">Data Ongkir</a></li>
-            <li><a class="nav-link" href="layout-default.html">Tambah Kecamatan</a></li>
-            <li><a class="nav-link" href="layout-default.html">Data Kecamatan</a></li>
+            <li><a class="nav-link" href="{{route('admin.tambahongkir')}}">Tambah Ongkir</a></li>
+            <li><a class="nav-link" href="{{route('admin.dataongkir')}}">Data Ongkir</a></li>
+            <li><a class="nav-link" href="{{route('admin.tambahkecamatan')}}">Tambah Kecamatan</a></li>
+            <li><a class="nav-link" href="{{route('admin.datakecamatan')}}">Data Kecamatan</a></li>
           </ul>
         </li>
 
       <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-        <a href="" class="btn btn-primary btn-lg btn-block btn-icon-split">
+        <a href="{{route('admin.logout')}}" class="btn btn-primary btn-lg btn-block btn-icon-split">
           <i class="fas fa-sign-out-alt"></i> Keluar
         </a>
       </div>        </aside>

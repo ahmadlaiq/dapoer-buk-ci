@@ -34,18 +34,6 @@
                 <input type="text" class="form-control">
               </div>
               <div class="form-group">
-                <label>Harga</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label>Deskripsi</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-              <div class="form-group">
-                <label>Gambar</label>
-                <input type="file" class="form-control">
-              </div>
-              <div class="form-group">
                 <button class="btn btn-primary mr-1" type="submit">Submit</button>
               </div>
                </form>
