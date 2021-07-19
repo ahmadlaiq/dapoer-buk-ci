@@ -13,10 +13,19 @@ class CreateOngkirsTable extends Migration
      */
     public function up()
     {
+
+        Schema::create('kecamatans', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama_kecamatan');
+            $table->timestamps();
+        });
+
         Schema::create('ongkirs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama_desa');
             $table->string('biaya');
+            $table->unsignedBigInteger('kecamatan_id');
+            $table->foreign('kecamatan_id')->references('id')->on('kecamatans');
             $table->timestamps();
         });
     }

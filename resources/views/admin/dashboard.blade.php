@@ -13,7 +13,7 @@
         </div>
         <div class="card-wrap">
           <div class="card-header">
-            <h4>Total Produk</h4>
+            <h4>Produk</h4>
           </div>
           <div class="card-body">
             10
@@ -28,7 +28,7 @@
         </div>
         <div class="card-wrap">
           <div class="card-header">
-            <h4>Total Promosi</h4>
+            <h4>Promosi</h4>
           </div>
           <div class="card-body">
             42
@@ -43,7 +43,7 @@
         </div>
         <div class="card-wrap">
           <div class="card-header">
-            <h4>Total Akun Rekening</h4>
+            <h4>Akun Rekening</h4>
           </div>
           <div class="card-body">
             1,201
@@ -58,7 +58,7 @@
         </div>
         <div class="card-wrap">
           <div class="card-header">
-            <h4>Total Ongkir</h4>
+            <h4>Ongkir</h4>
           </div>
           <div class="card-body">
             47
