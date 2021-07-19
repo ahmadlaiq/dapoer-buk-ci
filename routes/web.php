@@ -14,7 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('user.index',[
+        "title" => ''
+    ]);
+});
+Route::get('/kategori', function () {
+    return view('user.kategori',[
+        "title" => "Kategori |"
+    ]);
+});
+Route::get('/promo', function () {
+    return view('user.promo',[
+        'title' => "Promo |"
+    ]);
+});
+Route::get('/ongkir', function () {
+    return view('user.ongkir',[
+        'title' => "Ongkir |"
+    ]);
+});
+Route::get('/contact', function () {
+    return view('user.contact',[
+        'title'=> "Contact |"
+    ]);
 });
 
 //Auth Admin
@@ -49,4 +71,4 @@ Route::get('admin/logout', 'Auth\AdminController@Logout')->name('admin.logout');
 
 
 //User
-Route::get('home', 'User\HomeController@HomePage')->name('home');
+// Route::get('home', 'User\HomeController@HomePage')->name('home');
