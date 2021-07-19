@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDesasTablel extends Migration
+class CreateKecamatansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateDesasTablel extends Migration
      */
     public function up()
     {
-        Schema::create('desas_tablel', function (Blueprint $table) {
-            $table->id();
-            $table->string('desa');
-            $table->string('nominal');
+        Schema::create('kecamatans', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama_kecamatan');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateDesasTablel extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('desas_tablel');
+        Schema::dropIfExists('kecamatans');
     }
 }

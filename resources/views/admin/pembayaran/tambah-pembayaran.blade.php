@@ -30,16 +30,12 @@
               <form method="POST" action="{{ route('admin.login')}}" class="needs-validation" novalidate="">
                 @csrf
               <div class="form-group">
-                <label>Nama Metode Pembayaran</label>
+                <label>Nama Akun</label>
                 <input type="text" class="form-control">
               </div>
               <div class="form-group">
-                <label>Jenis Akun</label>
-                <select class="form-control">
-                  <option>Option 1</option>
-                  <option>Option 2</option>
-                  <option>Option 3</option>
-                </select>
+                <label>Nomor Akun</label>
+                <input type="text" class="form-control">
               </div>
               <div class="form-group">
                 <label>Gambar (Logo)</label>

@@ -14,8 +14,9 @@ class CreateOngkirsTable extends Migration
     public function up()
     {
         Schema::create('ongkirs', function (Blueprint $table) {
-            $table->id();
-            $table->string('kecamatan');
+            $table->bigIncrements('id');
+            $table->string('nama_desa');
+            $table->string('biaya');
             $table->timestamps();
         });
     }

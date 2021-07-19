@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVariansTable extends Migration
+class CreatePromosisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateVariansTable extends Migration
      */
     public function up()
     {
-        Schema::create('varians', function (Blueprint $table) {
+        Schema::create('promosis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama_varian');
+            $table->string('gambar');
+            $table->string('nama_promosi');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateVariansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('varians');
+        Schema::dropIfExists('promosis');
     }
 }

@@ -8,17 +8,17 @@
       </div>
       <ul class="sidebar-menu">
         <li class="menu-header">Dashboard</li>
-        <li class="dropdown">
+        <li class="dropdown {{ Route::is('admin.dashboard') ? 'active' : '' }}">
           <a href="{{route('admin.dashboard')}}" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
         </li>
         <li class="menu-header">Produk</li>
-        <li class="dropdown">
+        <li class="dropdown {{ Route::is('admin.dataproduk', 'admin.datavarian', 'admin.tambahproduk', 'admin.tambahvarian') ? 'active' : '' }}">
           <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Produk</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="{{route('admin.tambahproduk')}}">Tambah Produk</a></li>
-            <li><a class="nav-link" href="{{route('admin.dataproduk')}}">Data Produk</a></li>
-            <li><a class="nav-link" href="{{route('admin.tambahvarian')}}">Tambah Varian</a></li>
-            <li><a class="nav-link" href="{{route('admin.datavarian')}}">Data Varian</a></li>
+            <li class="{{ Route::is('admin.tambahproduk') ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.tambahproduk')}}">Tambah Produk</a></li>
+            <li class="{{ Route::is('admin.dataproduk') ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.dataproduk')}}">Data Produk</a></li>
+            <li class="{{ Route::is('admin.tambahvarian') ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.tambahvarian')}}">Tambah Varian</a></li>
+            <li class="{{ Route::is('admin.datavarian') ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.datavarian')}}">Data Varian</a></li>
           </ul>
         </li>
         <li class="menu-header">Promosi</li>
@@ -35,8 +35,6 @@
           <ul class="dropdown-menu">
             <li><a class="nav-link" href="{{route('admin.tambahpembayaran')}}">Tambah Pembayaran</a></li>
             <li><a class="nav-link" href="{{route('admin.datapembayaran')}}">Data Pembayaran</a></li>
-            <li><a class="nav-link" href="{{route('admin.tambahjenisakun')}}">Tambah Jenis Akun</a></li>
-            <li><a class="nav-link" href="{{route('admin.datajenisakun')}}">Data Jenis Akun</a></li>
           </ul>
         </li>
         <li class="menu-header">Ongkir</li>

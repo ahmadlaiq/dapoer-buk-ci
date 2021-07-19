@@ -30,8 +30,8 @@
               <form method="POST" action="{{ route('admin.login')}}" class="needs-validation" novalidate="">
                 @csrf
               <div class="form-group">
-                <label>Nama Produk</label>
-                <input type="text" class="form-control">
+                <label>Nama Varian</label>
+                <input type="text" name="nama_varian" class="form-control">
               </div>
               <div class="form-group">
                 <button class="btn btn-primary mr-1" type="submit">Submit</button>
