@@ -32,6 +32,9 @@ Route::get('admin/logout', 'Auth\AdminController@Logout')->name('admin.logout');
     Route::get('admin/data-varian', 'Admin\ProdukController@DataVarianPage')->name('admin.datavarian');
     Route::get('admin/tambah-produk', 'Admin\ProdukController@TambahProdukPage')->name('admin.tambahproduk');
     Route::get('admin/tambah-varian', 'Admin\ProdukController@TambahVarianPage')->name('admin.tambahvarian');
+    Route::post('admin/tambah-varian', 'Admin\ProdukController@TambahVarian')->name('admin.tambahvarian');
+    Route::delete('admin/deletevarian{id}', 'Admin\ProdukController@DeleteVarian')->name('admin.deletevarian');
+    Route::put('admin/updatevarian/{Varians}', 'Admin\ProdukController@UpdateVarian')->name('admin.updatevarian');
     //Promosi
     Route::get('admin/tambah-promosi', 'Admin\PromosiController@TambahPromosiPage')->name('admin.tambahpromosi');
     Route::get('admin/data-promosi', 'Admin\PromosiController@DataPromosiPage')->name('admin.datapromosi');
