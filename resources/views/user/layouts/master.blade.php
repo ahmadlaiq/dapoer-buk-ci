@@ -29,11 +29,11 @@
   @include('user.layouts.footer')
 
   <!-- Start Script -->
-  <script src="user/js/jquery-1.11.0.min.js"></script>
-  <script src="user/js/jquery-migrate-1.2.1.min.js"></script>
-  <script src="user/js/bootstrap.bundle.min.js"></script>
-  <script src="user/js/templatemo.js"></script>
-  <script src="user/js/custom.js"></script>
+  <script src="{{ asset('user/js/jquery-1.11.0.min.js') }}"></script>
+  <script src="{{ asset('user/js/jquery-migrate-1.2.1.min.js') }}"></script>
+  <script src="{{ asset('user/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('user/js/templatemo.js') }}"></script>
+  <script src="{{ asset('user/js/custom.js') }}"></script>
   <!-- End Script -->
 </body>
 

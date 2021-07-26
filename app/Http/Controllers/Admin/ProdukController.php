@@ -11,8 +11,7 @@ use App\Produks;
 class ProdukController extends Controller
 {
     public function DataProdukPage(){
-        $produk = DB::table('produks')->paginate(10);
-        return view('admin.produk.data-produk', ['produk'=> $produk]);
+        return view('admin.produk.data-produk');
     }
 
     public function DataVarianPage(){

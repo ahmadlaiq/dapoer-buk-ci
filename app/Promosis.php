@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Varians extends Model
+class Promosis extends Model
 {
+    
     protected $fillable = [
-        'nama_varian'
+        'nama_promosi', 'gambar'
     ];
 
 }
