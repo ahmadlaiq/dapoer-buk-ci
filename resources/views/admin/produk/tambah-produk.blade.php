@@ -11,12 +11,6 @@
       </div>
     </div>
 
-    <div class="section-body">
-      <h2 class="section-title">Forms</h2>
-      <p class="section-lead">
-        Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
-      </p>
-
       <div class="row">
         <div class="col-12 col-md-6 col-lg-12">
           <div class="card">
@@ -24,34 +18,31 @@
               <h4>Silahkan Masukkan Data Produk</h4>
             </div>
             <div class="card-body">
-              <div class="alert alert-info">
-                <b>Note!</b> Not all browsers support HTML5 type input.
-              </div>
               <form method="POST" action="{{ route('admin.login')}}" class="needs-validation" novalidate="">
                 @csrf
               <div class="form-group">
                 <label>Nama Produk</label>
-                <input type="text" class="form-control">
+                <input type="text" name="nama_produk" class="form-control">
               </div>
               <div class="form-group">
                 <label>Harga</label>
-                <input type="text" class="form-control">
+                <input type="text" name="nama_produk" class="form-control">
               </div>
               <div class="form-group">
                 <label>Varian</label>
                 <select class="form-control">
-                  <option>Option 1</option>
-                  <option>Option 2</option>
-                  <option>Option 3</option>
+                  
+                  <option>tes</option>
+                  
                 </select>
               </div>
               <div class="form-group">
                 <label>Deskripsi</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" name="nama_produk" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
               <div class="form-group">
                 <label>Gambar</label>
-                <input type="file" class="form-control">
+                <input type="file" name="nama_produk" class="form-control">
               </div>
               <div class="form-group">
                 <button class="btn btn-primary mr-1" type="submit">Submit</button>

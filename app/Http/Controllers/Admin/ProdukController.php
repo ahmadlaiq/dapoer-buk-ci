@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Varians;
+use App\Produks;
 
 class ProdukController extends Controller
 {
@@ -45,4 +46,5 @@ class ProdukController extends Controller
     $varians->save();
     return redirect()->back()->with('message', 'Data berhasil update!');
     }
+
 }
