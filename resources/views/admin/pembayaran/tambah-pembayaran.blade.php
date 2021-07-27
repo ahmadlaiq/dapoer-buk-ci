@@ -11,11 +11,6 @@
       </div>
     </div>
 
-    <div class="section-body">
-      <h2 class="section-title">Forms</h2>
-      <p class="section-lead">
-        Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
-      </p>
 
       <div class="row">
         <div class="col-12 col-md-6 col-lg-12">
@@ -24,22 +19,29 @@
               <h4>Silahkan Masukkan Data Metode Pembayaran</h4>
             </div>
             <div class="card-body">
-              <div class="alert alert-info">
-                <b>Note!</b> Not all browsers support HTML5 type input.
-              </div>
-              <form method="POST" action="{{ route('admin.login')}}" class="needs-validation" novalidate="">
+              @if (session('message'))
+              <div class="alert alert-success alert-dismissible show fade">
+                  <div class="alert-body">
+                    <button class="close" data-dismiss="alert">
+                      <span>×</span>
+                    </button>
+                    {{session('message')}}
+                  </div>
+                </div>
+              @endif
+              <form method="POST" action="{{ route('admin.tambahpembayaran')}}" class="needs-validation MultiFile-intercepted" novalidate="" enctype="multipart/form-data">
                 @csrf
               <div class="form-group">
                 <label>Nama Akun</label>
-                <input type="text" class="form-control">
+                <input type="text" name="nama_akun" class="form-control">
               </div>
               <div class="form-group">
                 <label>Nomor Akun</label>
-                <input type="text" class="form-control">
+                <input type="text" name="nomor_akun" class="form-control">
               </div>
               <div class="form-group">
                 <label>Gambar (Logo)</label>
-                <input type="file" class="form-control">
+                <input type="file" name="gambar" class="form-control">
               </div>
               <div class="form-group">
                 <button class="btn btn-primary mr-1" type="submit">Submit</button>

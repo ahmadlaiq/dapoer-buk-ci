@@ -39,8 +39,8 @@ Route::get('admin/logout', 'Auth\AdminController@Logout')->name('admin.logout');
     //Pembayaran
     Route::get('admin/data-pembayaran', 'Admin\PembayaranController@DataPembayaranPage')->name('admin.datapembayaran');
     Route::get('admin/tambah-pembayaran', 'Admin\PembayaranController@TambahPembayaranPage')->name('admin.tambahpembayaran');
-    Route::get('admin/data-jenis-akun', 'Admin\PembayaranController@DataJenisAkunPage')->name('admin.datajenisakun');
-    Route::get('admin/tambah-jenis-akun', 'Admin\PembayaranController@TambahJenisAkunPage')->name('admin.tambahjenisakun');
+    Route::post('admin/tambah-pembayaran', 'Admin\PembayaranController@TambahPembayaran')->name('admin.tambahpembayaran');
+    Route::delete('admin/deletepembayaran{id}', 'Admin\PembayaranController@DeletePembayaran')->name('admin.deletepembayaran');
     //Ongkir
     Route::get('admin/data-ongkir', 'Admin\OngkirController@DataOngkirPage')->name('admin.dataongkir');
     Route::get('admin/tambah-ongkir', 'Admin\OngkirController@TambahOngkirPage')->name('admin.tambahongkir');

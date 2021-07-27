@@ -28,7 +28,7 @@
                 </div>
               </div>
             @endif
-              <form method="POST" action="{{ route('admin.tambahpromosi')}}" class="needs-validation" novalidate="" class="MultiFile-intercepted" enctype="multipart/form-data">
+              <form method="POST" action="{{ route('admin.tambahpromosi')}}" class="needs-validation MultiFile-intercepted" novalidate="" enctype="multipart/form-data">
                 @csrf
               <div class="form-group">
                 <label>Nama Promosi</label>
