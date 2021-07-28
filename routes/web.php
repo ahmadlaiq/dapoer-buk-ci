@@ -46,6 +46,9 @@ Route::get('admin/logout', 'Auth\AdminController@Logout')->name('admin.logout');
     Route::get('admin/tambah-ongkir', 'Admin\OngkirController@TambahOngkirPage')->name('admin.tambahongkir');
     Route::get('admin/data-kecamatan', 'Admin\OngkirController@DataKecamatanPage')->name('admin.datakecamatan');
     Route::get('admin/tambah-kecamatan', 'Admin\OngkirController@TambahKecamatanPage')->name('admin.tambahkecamatan');
+    Route::post('admin/tambah-kecamatan', 'Admin\OngkirController@TambahKecamatan')->name('admin.tambahkecamatan');
+    Route::delete('admin/deletekecamatan/{id}', 'Admin\OngkirController@DeleteKecamatan')->name('admin.deletekecamatan');
+    Route::put('admin/updatekecamatan/{Kecamatans}', 'Admin\OngkirController@UpdateKecamatan')->name('admin.updatekecamatan');
 //});
 
 

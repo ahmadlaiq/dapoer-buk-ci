@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Kecamatans;
 
 class OngkirController extends Controller
 {
@@ -12,7 +14,8 @@ class OngkirController extends Controller
     }
 
     public function DataKecamatanPage(){
-        return view('admin.ongkir.data-kecamatan');
+        $kecamatans = DB::table('kecamatans')->paginate(10);
+        return view('admin.ongkir.data-kecamatan', ['kecamatans'=> $kecamatans]);
     }
 
     public function TambahOngkirPage(){
@@ -21,5 +24,24 @@ class OngkirController extends Controller
 
     public function TambahKecamatanPage(){
         return view('admin.ongkir.tambah-kecamatan');
+    }
+
+    public function TambahKecamatan(Request $request){
+        DB::insert('insert into kecamatans (nama_kecamatan) values (?)', [$request->nama_kecamatan]);
+        return redirect()->back()->with('message', 'Data berhasil disimpan!');
+    }
+
+    public function DeleteKecamatan($id){
+        DB::table('kecamatans')->where('id', $id)->delete();
+        return redirect()->back();
+    }
+
+    public function UpdateKecamatan(Request $request, $id)
+    {
+    $kecamatans = Kecamatans::find($id);
+    $kecamatans->nama_kecamatan = $request->nama_kecamatan;
+    // return dd($varians);
+    $kecamatans->save();
+    return redirect()->back()->with('message', 'Data berhasil update!');
     }
 }

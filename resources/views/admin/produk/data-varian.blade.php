@@ -76,9 +76,7 @@
                 </table>
                 {{$varians->links()}}
             </div>
-          </div>
-  
- 
+          </div> 
 
 @endsection
 
