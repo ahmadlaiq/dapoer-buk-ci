@@ -11,7 +11,8 @@ use App\Produks;
 class ProdukController extends Controller
 {
     public function DataProdukPage(){
-        return view('admin.produk.data-produk');
+        $produks = DB::table('produks')->paginate(10);
+        return view('admin.produk.data-produk', ['produks'=> $produks]);
     }
 
     public function DataVarianPage(){
@@ -20,8 +21,37 @@ class ProdukController extends Controller
     }
 
     public function TambahProdukPage(){
-        return view('admin.produk.tambah-produk');
+        $varians = DB::table('varians')->paginate(10);
+        return view('admin.produk.tambah-produk', ['varians'=> $varians]);
     }
+
+    public function TambahProduk(Request $request){
+        $gambar     = $request->file('gambar');
+        $gambarName = time()."_".$gambar->getClientOriginalName();
+        $gambarPath   = "gambar";
+        $gambar->move($gambarPath, $gambarName);
+
+        $this->saveProduk($request->all(), $gambarName);
+        return redirect()->back()->with('message', 'Data berhasil disimpan!');
+        
+    }
+
+    protected function saveProduk(array $data, $gambar = null)
+    {
+        return Produks::create([
+            'nama_produk'       => $data['nama_produk'],
+            'harga'             => $data['harga'],
+            'varian'            => $data['varian'],
+            'deskripsi'         => $data['deskripsi'],
+            'gambar'            => $gambar,
+        ]);
+    }
+
+    public function DeleteProduk($id){
+        DB::table('produks')->where('id', $id)->delete();
+        return redirect()->back();
+    }
+
 
     public function TambahVarianPage(){
         return view('admin.produk.tambah-varian');

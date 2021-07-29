@@ -9,7 +9,7 @@ class Produks extends Model
 {
     
     protected $fillable = [
-        'nama_produk', 'gambar', 'harga', 'deskripsi', 'varian_id'
+        'nama_produk', 'gambar', 'harga', 'deskripsi', 'varian'
     ];
     
 }
