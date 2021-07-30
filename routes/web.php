@@ -47,6 +47,9 @@ Route::get('admin/logout', 'Auth\AdminController@Logout')->name('admin.logout');
     //Ongkir
     Route::get('admin/data-ongkir', 'Admin\OngkirController@DataOngkirPage')->name('admin.dataongkir');
     Route::get('admin/tambah-ongkir', 'Admin\OngkirController@TambahOngkirPage')->name('admin.tambahongkir');
+    Route::post('admin/tambah-ongkir', 'Admin\OngkirController@TambahOngkir')->name('admin.tambahongkir');
+    Route::delete('admin/deleteongkir{id}', 'Admin\OngkirController@DeleteOngkir')->name('admin.deleteongkir');
+    Route::put('admin/updateongkir{Ongkirs}', 'Admin\OngkirController@UpdateOngkir')->name('admin.updateongkir');
     Route::get('admin/data-kecamatan', 'Admin\OngkirController@DataKecamatanPage')->name('admin.datakecamatan');
     Route::get('admin/tambah-kecamatan', 'Admin\OngkirController@TambahKecamatanPage')->name('admin.tambahkecamatan');
     Route::post('admin/tambah-kecamatan', 'Admin\OngkirController@TambahKecamatan')->name('admin.tambahkecamatan');

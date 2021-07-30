@@ -38,7 +38,8 @@
                         <td>{{ $data->nama_produk }}</td>
                         <td>{{ $data->varian }}</td>
                         <td><button class="btn btn-success" data-toggle="modal" data-target="#modalDetailProduk{{ $data->id }}">Detail</button> 
-                            <a href="#" data-id="{{ $data->id }}" class="btn btn-danger swal-confirm">
+                          {{-- <button class="btn btn-primary" data-toggle="modal" data-target="#modalUpdateProduk{{ $data->id }}">Edit</button> --}}
+                          <a href="#" data-id="{{ $data->id }}" class="btn btn-danger swal-confirm">
                                 <form action="{{ route('admin.deleteproduk',$data->id)}}" id="delete{{ $data->id }}" method="POST">
                                     @csrf
                                     @method('delete')
@@ -46,6 +47,46 @@
                                 Hapus</a>
                         </td>
                     </tr>
+                    <!-- Modal Update Produk-->
+                    {{-- <div class="modal fade" id="modalUpdateProduk{{ $data->id }}" tabindex="-1" aria-labelledby="modalUpdateProduk" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                      <div class="modal-header">
+                      <h5 class="modal-title">Edit Produk</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                      </button>
+                      </div>
+                      <div class="modal-body">
+                      <!--FORM UPDATE VARIAN-->
+                      <form action="{{ route('admin.updateproduk', $data->id)}}" method="post">
+                      @csrf
+                      @method('put')
+                      <div class="form-group">
+                      <label for="">Nama Produk</label>
+                      <input type="text" class="form-control" id="updateNamaProduk" name="nama_produk"
+                      value="{{ $data->nama_produk}}">
+                      </div>
+                      <div class="form-group">
+                        <label for="">Harga</label>
+                        <input type="text" class="form-control" id="updateHarga" name="harga"
+                        value="{{ $data->harga}}">
+                      </div>
+                      <div class="form-group">
+                        <label>Varian</label>
+                        <select name="varian" class="form-control mb-2">
+                          <option value="">{{ $data->varian }}</option>
+                        </select>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Perbarui Data</button>
+                      </form>
+                      <!--END FORM UPDATE VARIAN-->
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      <!-- End Modal UPDATE Varian--> --}}
+
                     <!-- Modal Detail Produk-->
                     <div class="modal fade" id="modalDetailProduk{{ $data->id }}" tabindex="-1" aria-labelledby="modalDetailProduk" aria-hidden="true">
                       <div class="modal-dialog modal-lg">
