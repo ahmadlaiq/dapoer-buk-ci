@@ -98,12 +98,30 @@
                       </button>
                       </div>
                       <div class="modal-body">
-                      
-                      <img height="500" width="800" src="{{ url('/gambar/'.$data->gambar) }}" alt="">
-                      <h6 class="profile-widget-item-value">{{ $data->nama_produk}}</h6>
-                      <h6 class="profile-widget-item-value">{{ $data->varian}}</h6>
-                      <h6 class="profile-widget-item-value">{{ $data->harga}}</h6>
-                      <h6 class="profile-widget-item-value">{{ $data->deskripsi}}</h6>
+                        <div class="form-group">
+                          <p style="text-align: center">Gambar Produk</p> <br>
+                          <div class="text-center"></div>
+                          <img height="400" width="400" src="{{ url('/gambar/'.$data->gambar) }}" alt="" style="display:block; margin:auto;">
+                      </div>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput">Nama Produk</label>
+                          <input disabled type="text" class="form-control"
+                              placeholder="{{ $data->nama_produk}}">
+                      </div>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput">Varian</label>
+                        <input disabled type="text" class="form-control"
+                            placeholder="{{ $data->varian}}">
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Varian</label>
+                      <input disabled type="text" class="form-control"
+                          placeholder="{{ $data->harga}}">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Deskripsi Produk</label>
+                    <textarea class="form-control" readonly rows="3" placeholder="{{ $data->deskripsi}}"></textarea>
+                </div>
                       </div>
                       </div>
                       </div>

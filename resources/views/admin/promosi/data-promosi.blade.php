@@ -55,7 +55,12 @@
                       </button>
                       </div>
                       <div class="modal-body">
-                      <h6 class="profile-widget-item-value">{{ $data->nama_promosi}}</h6>
+                      
+                      <div class="form-group">
+                        <label for="formGroupExampleInput">Nama Promosi</label>
+                        <input disabled type="text" class="form-control"
+                            placeholder="{{ $data->nama_promosi }}">
+                    </div>
                       <img height="500" width="800" src="{{ url('/gambar/'.$data->gambar) }}" alt="">
                       </div>
                       </div>
