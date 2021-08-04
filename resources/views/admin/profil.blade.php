@@ -10,9 +10,10 @@
       </div>
     </div>
     <div class="section-body">
+      
       <h2 class="section-title">Hi, Admin!</h2>
       <p class="section-lead">
-        Selamat datang di halaman admin dapoer bu ci.
+        Selamat datang di halaman admin dapoer buk ci.
       </p>
 
       <div class="row mt-sm-4">
@@ -40,8 +41,9 @@
               </div>
             </div>
             <div class="profile-widget-description">
-              <div class="profile-widget-name">Irmawati Puji Astuti <div class="text-muted d-inline font-weight-normal"><div class="slash"></div> Admin</div></div>
-              Ujang maman is a superhero name in <b>Indonesia</b>, especially in my family. He is not a fictional character but an original hero in my family, a hero for his children and for his wife. So, I use the name as a user in this template. Not a tribute, I'm just bored with <b>'John Doe'</b>.
+              @foreach ($users as $no => $data)
+              <div class="profile-widget-name">{{ $data->name }} <div class="text-muted d-inline font-weight-normal"><div class="slash"></div> Admin</div></div>
+              @endforeach
             </div>
           </div>
         </div>

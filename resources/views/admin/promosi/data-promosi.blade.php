@@ -25,16 +25,18 @@
               </div>
             @endif
                 <h4>Data Promosi</h4>
-                    <table class="table table-bordered table-striped table-sm">
+                    <table class="table table-bordered table-striped table-sm table-hover">
                     <tr>
                         <th>No</th>
-                        <th>Nama Promosi</th>
+                        <th>Nama Produk</th>
+                        <th>Diskon</th>
                         <th>Action</th>
                     </tr>
                     @foreach ($promoses as $no => $data)
                     <tr>
                         <td>{{ $promoses->firstItem()+$no }}</td>
-                        <td>{{ $data->nama_promosi }}</td>
+                        <td>{{ $data->produk }}</td>
+                        <td>{{ $data->diskon }} %</td>
                         <td><button class="btn btn-success" data-toggle="modal" data-target="#modalDetailPromosi{{ $data->id }}">Detail</button> 
                             <a href="#" data-id="{{ $data->id }}" class="btn btn-danger swal-confirm">
                                 <form action="{{ route('admin.deletepromosi',$data->id)}}" id="delete{{ $data->id }}" method="POST">
@@ -55,13 +57,32 @@
                       </button>
                       </div>
                       <div class="modal-body">
-                      
+                        <div class="form-group">
+                          <p style="text-align: center">Gambar Promosi</p> <br>
+                          <div class="text-center"></div>
+                          <img height="400" width="400" src="{{ url('/gambar/'.$data->gambar) }}" alt="" style="display:block; margin:auto;">
+                      </div>
                       <div class="form-group">
-                        <label for="formGroupExampleInput">Nama Promosi</label>
+                        <label for="formGroupExampleInput">Nama Produk</label>
                         <input disabled type="text" class="form-control"
-                            placeholder="{{ $data->nama_promosi }}">
-                    </div>
-                      <img height="500" width="800" src="{{ url('/gambar/'.$data->gambar) }}" alt="">
+                            placeholder="{{ $data->produk }}">
+                      </div>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput">Harga Sebelum Promosi</label>
+                        <input disabled type="text" class="form-control"
+                            placeholder="Rp {{ $data->sebelum_promosi }}">
+                      </div>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput">Harga Sesudah Promosi</label>
+                        <input disabled type="text" class="form-control"
+                            placeholder="Rp {{ $data->sesudah_promosi }}">
+                      </div>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput">Diskon</label>
+                        <input disabled type="text" class="form-control"
+                            placeholder="{{ $data->diskon}} % ">
+                      </div>
+                      {{-- <img height="500" width="800" src="{{ url('/gambar/'.$data->gambar) }}" alt=""> --}}
                       </div>
                       </div>
                       </div>

@@ -25,7 +25,7 @@
               </div>
             @endif
                 <h4>Data Ongkir</h4>
-                    <table class="table table-bordered table-striped table-sm">
+                    <table class="table table-bordered table-striped table-sm table-hover">
                     <tr>
                         <th>No</th>
                         <th>Kecamatan</th> 
@@ -38,7 +38,7 @@
                         <td>{{ $ongkirs->firstItem()+$no }}</td>
                         <td>{{ $data->kecamatan }}</td>
                         <td>{{ $data->nama_desa }}</td>
-                        <td>{{ $data->biaya }}</td>
+                        <td>Rp {{ $data->biaya }}</td>
                         <td><button class="btn btn-primary" data-toggle="modal" data-target="#modalUpdateKecamatan{{ $data->id }}">Edit</button>
                             <a href="#" data-id="{{ $data->id }}" class="btn btn-danger swal-confirm">
                                 <form action="{{ route('admin.deleteongkir',$data->id)}}" id="delete{{ $data->id }}" method="POST">
@@ -76,7 +76,7 @@
                     <div class="form-group">
                         <label for="">Biaya</label>
                         <input type="text" class="form-control" id="updateNamaBarang" name="biaya"
-                        value="{{ $data->biaya}}">
+                        value="Rp {{ $data->biaya}}">
                         </div>
                     <button type="submit" class="btn btn-primary">Perbarui Data</button>
                     </form>

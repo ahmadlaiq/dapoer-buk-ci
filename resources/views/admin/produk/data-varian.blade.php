@@ -25,7 +25,7 @@
               </div>
             @endif
                 <h4>Data Varian</h4>
-                    <table class="table table-bordered table-striped table-sm">
+                    <table class="table table-bordered table-striped table-sm table-hover">
                     <tr>
                         <th>No</th>
                         <th>Nama Varian</th>

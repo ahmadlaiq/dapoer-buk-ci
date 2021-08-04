@@ -34,7 +34,7 @@ class PembayaranController extends Controller
         return Pembayarans::create([
             'nama_akun'      => $data['nama_akun'],
             'nomor_akun'      => $data['nomor_akun'],
-            'gambar'            => $gambar,
+            'gambar'           => $gambar,
         ]);
     }
 

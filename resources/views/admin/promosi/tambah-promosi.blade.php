@@ -30,12 +30,24 @@
             @endif
               <form method="POST" action="{{ route('admin.tambahpromosi')}}" class="needs-validation MultiFile-intercepted" novalidate="" enctype="multipart/form-data">
                 @csrf
+                <div class="form-group">
+                  <label>Nama Produk</label>
+                  <input type="text" name="produk" class="form-control">
+                </div> 
               <div class="form-group">
-                <label>Nama Promosi</label>
-                <input type="text" name="nama_promosi" class="form-control">
+                <label>Harga Sebelum Promosi</label>
+                <input type="text" name="sebelum_promosi" class="form-control">
               </div>
               <div class="form-group">
-                <label>Banner Promosi</label>
+                <label>Harga Sesudah Promosi</label>
+                <input type="text" name="sesudah_promosi" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Diskon Berapa Persen</label>
+                <input type="text" name="diskon" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Gambar</label>
                 <input type="file" name="gambar" class="form-control">
               </div>
               <div class="form-group">

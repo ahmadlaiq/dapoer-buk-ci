@@ -25,7 +25,7 @@
               </div>
             @endif
                 <h4>Data Kecamatan</h4>
-                    <table class="table table-bordered table-striped table-sm">
+                    <table class="table table-bordered table-striped table-sm table-hover">
                     <tr>
                         <th>No</th>
                         <th>Nama Kecamatan</th>

@@ -72,7 +72,6 @@
                       <label class="custom-control-label" for="remember-me">Remember Me</label>
                     </div>
                   </div>
-
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
                       Login
@@ -82,10 +81,10 @@
               </div>
             </div>
             <div class="simple-footer">
-              Copyright &copy; Bagoes Mengemudi 2021
+              Copyright &copy; Dapoer Buk Ci 2021
               <div>
-                Made With <span class="fab fa-heart"></span> by
-                <a href="http://www.instagram.com/ahmadlaiq__">Alex</a>
+                Made With <span class="fas fa-heart"></span> by
+                <a href="http://www.instagram.com/ahmadlaiq__">CraftDev</a>
                 </div>
             </div>
             </div>

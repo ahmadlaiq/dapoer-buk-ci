@@ -13,15 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('user.index');
+});
+
 //Auth Admin
 Route::get('admin/login', 'Auth\AdminController@LoginPage')->name('admin.login');
 Route::post('admin/login', 'Auth\AdminController@Login')->name('admin.login');
 Route::get('admin/logout', 'Auth\AdminController@Logout')->name('admin.logout');
 
 //Admin
-//Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'auth'], function () {
     Route::get('admin/profil', 'Admin\ProfilController@ProfilPage')->name('admin.profil');
     Route::get('admin/setting', 'Admin\ProfilController@SettingPage')->name('admin.setting');
+    Route::put('admin/updatesetting{User}', 'Admin\ProfilController@Setting')->name('admin.updatesetting');
     Route::get('admin/dashboard', 'Admin\DashboardController@DashboardPage')->name('admin.dashboard');
     //Produk
     Route::get('admin/data-produk', 'Admin\ProdukController@DataProdukPage')->name('admin.dataproduk');
@@ -55,32 +60,12 @@ Route::get('admin/logout', 'Auth\AdminController@Logout')->name('admin.logout');
     Route::post('admin/tambah-kecamatan', 'Admin\OngkirController@TambahKecamatan')->name('admin.tambahkecamatan');
     Route::delete('admin/deletekecamatan/{id}', 'Admin\OngkirController@DeleteKecamatan')->name('admin.deletekecamatan');
     Route::put('admin/updatekecamatan/{Kecamatans}', 'Admin\OngkirController@UpdateKecamatan')->name('admin.updatekecamatan');
-//});
+});
 
 
 //User
-Route::get('/', function () {
-    return view('user.index',[
-        "title" => ''
-    ]);
-});
-Route::get('/kategori', function () {
-    return view('user.kategori',[
-        "title" => "Kategori |"
-    ]);
-});
-Route::get('/promo', function () {
-    return view('user.promo',[
-        'title' => "Promo |"
-    ]);
-});
-Route::get('/ongkir', function () {
-    return view('user.ongkir',[
-        'title' => "Ongkir |"
-    ]);
-});
-Route::get('/contact', function () {
-    return view('user.contact',[
-        'title'=> "Contact |"
-    ]);
-});
+Route::get('user/home', 'User\UserController@Home')->name('user.home');
+Route::get('user/kategori', 'User\UserController@Kategori')->name('user.kategori');
+Route::get('user/promo', 'User\UserController@Promo')->name('user.promo');
+Route::get('user/cek-ongkir', 'User\UserController@CekOngkir')->name('user.cekongkir');
+Route::get('user/contact-us', 'User\UserController@ContactUs')->name('user.contactus');

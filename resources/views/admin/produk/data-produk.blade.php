@@ -25,7 +25,7 @@
               </div>
             @endif
                 <h4>Data Produk</h4>
-                    <table class="table table-bordered table-striped table-sm">
+                    <table class="table table-bordered table-striped table-sm table-hover">
                     <tr>
                         <th>No</th>
                         <th>Nama Produk</th>
@@ -114,9 +114,9 @@
                             placeholder="{{ $data->varian}}">
                     </div>
                     <div class="form-group">
-                      <label for="formGroupExampleInput">Varian</label>
+                      <label for="formGroupExampleInput">Harga</label>
                       <input disabled type="text" class="form-control"
-                          placeholder="{{ $data->harga}}">
+                          placeholder="Rp {{ $data->harga}}">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Deskripsi Produk</label>

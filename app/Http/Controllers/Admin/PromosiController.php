@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Promosis;
 
+
 class PromosiController extends Controller
 {
     public function TambahPromosiPage(){
@@ -14,6 +15,7 @@ class PromosiController extends Controller
     }
 
     public function TambahPromosi(Request $request){
+
         $gambar     = $request->file('gambar');
         $gambarName = time()."_".$gambar->getClientOriginalName();
         $gambarPath   = "gambar";
@@ -27,8 +29,11 @@ class PromosiController extends Controller
     protected function savePromosi(array $data, $gambar = null)
     {
         return Promosis::create([
-            'nama_promosi'      => $data['nama_promosi'],
-            'gambar'            => $gambar,
+            'produk'               => $data['produk'],
+            'sebelum_promosi'      => $data['sebelum_promosi'],
+            'sesudah_promosi'      => $data['sesudah_promosi'],
+            'diskon'               => $data['diskon'],
+            'gambar'               => $gambar,
         ]);
     }
 

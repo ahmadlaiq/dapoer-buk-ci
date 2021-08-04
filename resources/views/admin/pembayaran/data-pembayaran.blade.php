@@ -68,7 +68,7 @@
                             placeholder="{{ $data->nama_akun}}">
                     </div>
                     <div class="form-group">
-                      <label for="formGroupExampleInput">Nama Akun</label>
+                      <label for="formGroupExampleInput">Nomor Akun</label>
                       <input disabled type="text" class="form-control"
                           placeholder="{{ $data->nomor_akun}}">
                   </div>

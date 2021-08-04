@@ -8,7 +8,7 @@ class Promosis extends Model
 {
     
     protected $fillable = [
-        'nama_promosi', 'gambar'
+        'produk', 'sebelum_promosi', 'sesudah_promosi', 'diskon', 'gambar'
     ];
 
 }

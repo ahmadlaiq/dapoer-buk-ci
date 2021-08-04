@@ -4,78 +4,106 @@
 <!-- Start Content Page -->
 <div class="container-fluid bg-light py-5">
 	<div class="col-md-6 m-auto text-center">
-		<h1 class="h1">Kontak kami</h1>
+		<h3 class="h2">Kontak kami</h3>
 		<p>
 			Silahkan mengirimkan pesan kepada kami apabila ada pertanyaan, kritik, dan saran. Atau anda bisa mengunjungi
-			kami pada lokasi map tertera.
+			kami pada lokasi yang tertera.
 		</p>
 	</div>
 </div>
 
-<!-- Start Map -->
-{{-- <div id="mapid" style="width: 100%; height: 300px"></div>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-	integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-	crossorigin=""></script>
-<script>
-	var mymap = L.map("mapid").setView([-23.013104, -43.394365, 13], 13);
-
-	L.tileLayer(
-	  "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw",
-	  {
-		maxZoom: 18,
-		attribution:
-		  'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-		  '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-		  'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		id: "mapbox/streets-v11",
-		tileSize: 512,
-		zoomOffset: -1,
-	  }
-	).addTo(mymap);
-
-	L.marker([-23.013104, -43.394365, 13])
-	  .addTo(mymap)
-	  .bindPopup("<b>Dapoer Buk Ci</b><br />Location.")
-	  .openPopup();
-
-	mymap.scrollWheelZoom.disable();
-	mymap.touchZoom.disable();
-</script> --}}
-<!-- End Map -->
-
-<!-- Start Contact -->
-<div class="container py-5">
-	<div class="row py-5">
-		<form class="col-md-9 m-auto" method="post" role="form">
-			<div class="row">
-				<div class="form-group col-md-6 mb-3">
-					<label for="inputname">Nama</label>
-					<input type="text" class="form-control mt-1" id="name" name="name" placeholder="Name" />
-				</div>
-				<div class="form-group col-md-6 mb-3">
-					<label for="inputemail">Email</label>
-					<input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email" />
-				</div>
-			</div>
-			<div class="mb-3">
-				<label for="inputsubject">Subject</label>
-				<input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Subject" />
-			</div>
-			<div class="mb-3">
-				<label for="inputmessage">Pesan</label>
-				<textarea class="form-control mt-1" id="message" name="message" placeholder="Message"
-					rows="8"></textarea>
-			</div>
-			<div class="row">
-				<div class="col text-end mt-2">
-					<button type="submit" class="btn btn-success btn-lg px-3">
-						Kirim
-					</button>
-				</div>
-			</div>
-		</form>
-	</div>
-</div>
-<!-- End Contact -->
+<section class="contact-area section--padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="form-box">
+					<div class="form-title-wrap">
+						<h3 class="title">Dengan Senang Kami Mendengarkan</h3>
+						<p class="font-size-15">Silahkan mengirim pesan dan kami akan meresponnya.</p>
+					</div><!-- form-title-wrap -->
+					<div class="form-content ">
+						<div class="contact-form-action">
+							<form class="row messenger-box-form" method="post" action="mailer.php">
+								<div class="alert alert-success messenger-box-contact__msg col-lg-12" style="display: none" role="alert">
+									Thank You! Your message has been sent.
+								</div>
+								<div class="col-lg-6 responsive-column">
+									<div class="input-box messenger-box-input-wrap">
+										<label class="label-text" for="name">Nama</label>
+										<div class="form-group">
+											<span class="la la-user form-icon"></span>
+											<input class="form-control" type="text" id="name" name="name" placeholder="Ketik nama" required="">
+										</div>
+									</div>
+								</div><!-- end col-lg-6 -->
+								<div class="col-lg-6 responsive-column">
+									<div class="input-box messenger-box-input-wrap">
+										<label class="label-text" for="email">Email</label>
+										<div class="form-group">
+											<span class="la la-envelope-o form-icon"></span>
+											<input class="form-control" type="email" name="email" id="email" placeholder="Ketik alamat email" required="">
+										</div>
+									</div>
+								</div><!-- end col-lg-6 -->
+								<div class="col-lg-12">
+									<div class="input-box messenger-box-input-wrap">
+										<label class="label-text" for="message">Pesan</label>
+										<div class="form-group">
+											<span class="la la-pencil form-icon"></span>
+											<textarea class="message-control form-control" name="message" id="message" placeholder="Ketik pesan" required=""></textarea>
+										</div>
+									</div>
+								</div><!-- end col-lg-12 -->
+								<div class="col-lg-12">
+									<div class="btn-box messenger-box-input-wrap">
+										<button name="submit" type="submit" class="theme-btn send-message-btn" id="send-message-btn">Kirim Pesan</button>
+									</div>
+								</div><!-- end col-lg-12 -->
+							</form>
+						</div><!-- end contact-form-action -->
+					</div><!-- end form-content -->
+				</div><!-- end form-box -->
+			</div><!-- end col-lg-8 -->
+			<div class="col-lg-4">
+				<div class="form-box">
+					<div class="form-title-wrap">
+						<h3 class="title">Contact Us</h3>
+					</div><!-- form-title-wrap -->
+					<div class="form-content">
+						<div class="address-book">
+							<ul class="list-items contact-address">
+								<li>
+									<i class="la la-map-marker icon-element"></i>
+									<h5 class="title font-size-16 pb-1">Address</h5>
+									<p class="map__desc">
+										Jalan Sumber Mulyo Desa Wedani, RT.6/RW.3, Wedani, Cerme, Gresik, Jatim 61171
+									</p>
+								</li>
+								<li>
+									<i class="la la-phone icon-element"></i>
+									<h5 class="title font-size-16 pb-1">Phone</h5>
+									
+									<p class="map__desc">Mobile: 0812-3562-4746</p>
+								</li>
+								<li>
+									<i class="la la-envelope-o icon-element"></i>
+									<h5 class="title font-size-16 pb-1">Email</h5>
+									<p class="map__desc">dapoerbuci@gmail.com</p>
+									
+								</li>
+							</ul>
+							<ul class="social-profile text-center">
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+								<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div><!-- end form-content -->
+				</div><!-- end form-box -->
+			</div><!-- end col-lg-4 -->
+		</div><!-- end row -->
+	</div><!-- end container -->
+</section>
 @endsection
