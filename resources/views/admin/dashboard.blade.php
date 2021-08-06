@@ -16,7 +16,7 @@
             <h4>Produk</h4>
           </div>
           <div class="card-body">
-            10
+            {{ $produks }}
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@
             <h4>Promosi</h4>
           </div>
           <div class="card-body">
-            40
+            {{ $promoses }}
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@
             <h4>Akun Rekening</h4>
           </div>
           <div class="card-body">
-            5
+            {{ $pembayarans }}
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@
             <h4>Ongkir</h4>
           </div>
           <div class="card-body">
-            40
+            {{ $ongkirs }}
           </div>
         </div>
       </div>

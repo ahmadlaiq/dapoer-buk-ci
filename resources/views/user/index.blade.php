@@ -193,7 +193,7 @@
                       <a href=""><h3 class="card-subtitle">Get Ready for Some Fun in the Sun</h3></a>
                       <p class="card-meta">Rp12.000</p>
                       <div class="btn-box padding-top-30px">
-                        <a href="https://wa.me/625745974148?text=Halo%20Admin%0ANama%20saya%20nadine" class="theme-btn border-0">Pesan</a>
+                        <a href="https://wa.me/6285745974148?text=Halo%20Admin!%0ASaya%20pesan:%20*Seblak-Pedas%20Level%201*%0AHarga:%20*Rp12000*" class="theme-btn border-0">Pesan</a>
                     </div>
                   </div>
               </div><!-- end card-item -->

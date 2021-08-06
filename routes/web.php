@@ -69,3 +69,5 @@ Route::get('user/kategori', 'User\UserController@Kategori')->name('user.kategori
 Route::get('user/promo', 'User\UserController@Promo')->name('user.promo');
 Route::get('user/cek-ongkir', 'User\UserController@CekOngkir')->name('user.cekongkir');
 Route::get('user/contact-us', 'User\UserController@ContactUs')->name('user.contactus');
+Route::get('user/detail-produk', 'User\UserController@DetailProduk')->name('detailproduk');
+Route::get('user/detail-promo', 'User\UserController@DetailPromo')->name('detailpromo');

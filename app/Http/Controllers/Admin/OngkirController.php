@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Kecamatans;
+use App\Ongkirs;
 
 class OngkirController extends Controller
 {
@@ -22,6 +23,17 @@ class OngkirController extends Controller
     public function DeleteOngkir($id){
         DB::table('ongkirs')->where('id', $id)->delete();
         return redirect()->back();
+    }
+
+    public function UpdateOngkir(Request $request, $id)
+    {
+    $ongkirs = Ongkirs::find($id);
+    $ongkirs->kecamatan = $request->kecamatan;
+    $ongkirs->nama_desa = $request->nama_desa;
+    $ongkirs->biaya = $request->biaya;
+    // return dd($ongkirs);
+    $ongkirs->save();
+    return redirect()->back()->with('message', 'Data berhasil update!');
     }
 
     public function DataKecamatanPage(){

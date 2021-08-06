@@ -23,13 +23,13 @@
           <div class="col-md-4 pt-5">
               <h2 class="h2 text-light border-bottom pb-3 border-light">Metode Pembayaran</h2>
               <ul class="list-unstyled text-light footer-link-list">
-                  <li><a class="text-light text-decoration-none" href="#">BCA</a></li>
-                  <li><a class="text-light text-decoration-none" href="#">Mandiri</a></li>
-                  <li><a class="text-light text-decoration-none" href="#">BRI</a></li>
-                  <li><a class="text-light text-decoration-none" href="#">BNI</a></li>
-                  <li><a class="text-light text-decoration-none" href="#">OVO</a></li>
-                  <li><a class="text-light text-decoration-none" href="#">Dana</a></li>
-                  <li><a class="text-light text-decoration-none" href="#">Shopepay</a></li>
+                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">03950 1000 55 0303</a></li>
+                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">Mandiri</a></li>
+                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">BRI</a></li>
+                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">BCA</a></li>
+                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">OVO</a></li>
+                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">Dana</a></li>
+                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">Shopepay</a></li>
               </ul>
           </div>
 

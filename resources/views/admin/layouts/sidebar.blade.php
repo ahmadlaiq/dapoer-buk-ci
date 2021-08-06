@@ -1,7 +1,7 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
       <div class="sidebar-brand">
-        <a href="{{route('admin.dashboard')}}">
+        <a href="/">
           <img src="{{asset('user/img/logo.svg')}}" width="" height="30" alt="">
         </a>
       </div>
