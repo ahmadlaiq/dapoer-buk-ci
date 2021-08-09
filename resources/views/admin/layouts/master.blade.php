@@ -14,7 +14,7 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
   <link rel="stylesheet" href="{{asset('assets/css/components.css')}}">
-
+  
   @stack('page-styles')
 <!-- Start GA -->
 <script async src="{{asset('https://www.googletagmanager.com/gtag/js?id=UA-94034622-3')}}"></script>
@@ -49,7 +49,7 @@
       </footer>
     </div>
   </div>
-@stack('before-scripts')
+  @stack('before-scripts')
   <!-- General JS Scripts -->
   <script src="{{asset('assets/modules/jquery.min.js')}}"></script>
   <script src="{{asset('assets/modules/popper.js')}}"></script>

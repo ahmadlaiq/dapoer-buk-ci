@@ -10,10 +10,6 @@ use App\User;
 
 class ProfilController extends Controller
 {
-    public function ProfilPage(){
-        $users = DB::table('users')->get();
-        return view('admin.profil', ['users'=> $users]);
-    }
 
     public function SettingPage(){
         $users = DB::table('users')->get();

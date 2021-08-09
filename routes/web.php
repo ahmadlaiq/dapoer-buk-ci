@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.index');
-});
+// Route::get('/', function () {
+//     return view('user.index');
+// });
+
+Route::get('/', 'User\UserController@Home')->name('/');
 
 //Auth Admin
 Route::get('admin/login', 'Auth\AdminController@LoginPage')->name('admin.login');
@@ -24,7 +26,6 @@ Route::get('admin/logout', 'Auth\AdminController@Logout')->name('admin.logout');
 
 //Admin
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('admin/profil', 'Admin\ProfilController@ProfilPage')->name('admin.profil');
     Route::get('admin/setting', 'Admin\ProfilController@SettingPage')->name('admin.setting');
     Route::put('admin/updatesetting{User}', 'Admin\ProfilController@Setting')->name('admin.updatesetting');
     Route::get('admin/dashboard', 'Admin\DashboardController@DashboardPage')->name('admin.dashboard');
@@ -64,10 +65,9 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 //User
-Route::get('user/home', 'User\UserController@Home')->name('user.home');
+Route::post('user/pesan', 'User\UserController@Pesan')->name('user.pesan');
 Route::get('user/kategori', 'User\UserController@Kategori')->name('user.kategori');
 Route::get('user/promo', 'User\UserController@Promo')->name('user.promo');
 Route::get('user/cek-ongkir', 'User\UserController@CekOngkir')->name('user.cekongkir');
 Route::get('user/contact-us', 'User\UserController@ContactUs')->name('user.contactus');
-Route::get('user/detail-produk', 'User\UserController@DetailProduk')->name('detailproduk');
-Route::get('user/detail-promo', 'User\UserController@DetailPromo')->name('detailpromo');
+

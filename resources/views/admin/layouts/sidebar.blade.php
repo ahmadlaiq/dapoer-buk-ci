@@ -11,11 +11,11 @@
       <ul class="sidebar-menu">
         <li class="menu-header">Dashboard</li>
         <li class="dropdown {{ Route::is('admin.dashboard') ? 'active' : '' }}">
-          <a href="{{route('admin.dashboard')}}" class="nav-link card-icon"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+          <a href="{{route('admin.dashboard')}}" class="nav-link card-icon"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
         </li>
         <li class="menu-header">Produk</li>
         <li class="dropdown {{ Route::is('admin.dataproduk', 'admin.datavarian', 'admin.tambahproduk', 'admin.tambahvarian') ? 'active' : '' }}">
-          <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Produk</span></a>
+          <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-shopping-bag"></i> <span>Produk</span></a>
           <ul class="dropdown-menu">
             <li class="{{ Route::is('admin.tambahproduk') ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.tambahproduk')}}">Tambah Produk</a></li>
             <li class="{{ Route::is('admin.dataproduk') ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.dataproduk')}}">Data Produk</a></li>
@@ -25,7 +25,7 @@
         </li>
         <li class="menu-header">Promosi</li>
         <li class="dropdown {{ Route::is('admin.tambahpromosi', 'admin.datapromosi') ? 'active' : '' }}">
-          <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Promosi</span></a>
+          <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-gift"></i> <span>Promosi</span></a>
           <ul class="dropdown-menu">
             <li class="{{ Route::is('admin.tambahpromosi') ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.tambahpromosi')}}">Tambah Promosi</a></li>
             <li class="{{ Route::is('admin.datapromosi') ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.datapromosi')}}">Data Promosi</a></li>
@@ -33,7 +33,7 @@
         </li>
         <li class="menu-header">Pembayaran</li>
         <li class="dropdown {{ Route::is('admin.tambahpembayaran', 'admin.datapembayaran') ? 'active' : '' }}">
-          <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Pembayaran</span></a>
+          <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-credit-card"></i> <span>Pembayaran</span></a>
           <ul class="dropdown-menu">
             <li class="{{ Route::is('admin.tambahpembayaran') ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.tambahpembayaran')}}">Tambah Pembayaran</a></li>
             <li class="{{ Route::is('admin.datapembayaran') ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.datapembayaran')}}">Data Pembayaran</a></li>
@@ -41,7 +41,7 @@
         </li>
         <li class="menu-header">Ongkir</li>
         <li class="dropdown {{ Route::is('admin.tambahongkir', 'admin.dataongkir', 'admin.tambahkecamatan', 'admin.datakecamatan') ? 'active' : '' }}">
-          <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Ongkir</span></a>
+          <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-truck"></i> <span>Ongkir</span></a>
           <ul class="dropdown-menu">
             <li class="{{ Route::is('admin.tambahongkir') ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.tambahongkir')}}">Tambah Ongkir</a></li>
             <li class="{{ Route::is('admin.dataongkir') ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.dataongkir')}}">Data Ongkir</a></li>

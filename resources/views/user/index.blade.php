@@ -34,8 +34,8 @@
           </div>
           <div class="col-lg-6 mb-0 d-flex align-items-center">
             <div class="text-align-left">
-              <h1 class="h1">Ayam Panggang Asli: Daging 90%, Kulit 10%!</h1>
-              <h3 class="h2">Ayam Panggang Asam Pedas Manis</h3>
+              <h1 class="h1">Ayam Panggang: Daging 90%, Kulit 10%!</h1>
+              <h3 class="h2">Kepiting Asam Pedas Manis</h3>
               <p>
                 “Dimasak dengan resep rahasia Ayam Panggang Asam Pedes ala Dapoer Buk Ci, <Strong><a href="">  Klik Disini Untuk Pesan</a></Strong>. Kalo kamu geli-geli gimana gitu pas masak ayam, pesen aja udah. Nggak kuat aku liat kamu motong-motong ayam sendiri.”
               </p>
@@ -79,68 +79,52 @@
 </div>
 <!-- End Banner Hero -->
 
-<!-- Start Featured Product -->
-<section>
-  <div class="container py-5">
-    <div class="row text-center py-3">
-      {{-- <div class="col-lg-6 m-auto">
-        <h1 class="h1">Featured Product</h1>
-        <p>
-          Reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-        </p>
-      </div> --}}
-    </div>
-    <div class="row">
-      <div class="col-12 col-md-3 mb-4">
-        <div class="card h-80">
-          <a href="shop-single.html">
-            <img src="{{ asset('/user/img/seblak.jpg') }}" class="card-img-top" alt="..." />
-          </a>
-          <div class="card-body">
-           <h5 class="card-subtitle">Seblak - Pedas Level 1</h5>
-           <p class="card-meta">Rp12.000</p>
-            
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-3 mb-4">
-        <div class="card h-80">
-          <a href="shop-single.html">
-            <img src="{{ asset('/user/img/seblak.jpg') }}" class="card-img-top" alt="..." />
-          </a>
-          <div class="card-body">
-            <h5 class="card-subtitle">Seblak - Pedas Level 2</h5>
-            <p class="card-meta">Rp12.000</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-3 mb-4">
-        <div class="card h-80">
-          <a href="shop-single.html">
-            <img src="{{ asset('/user/img/seblak.jpg') }}" class="card-img-top" alt="..." />
-          </a>
-          <div class="card-body">
-            <h5 class="card-subtitle">Seblak - Pedas Level 3</h5>
-            <p class="card-meta">Rp12.000</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-3 mb-4">
-        <div class="card h-80">
-          <a href="shop-single.html">
-            <img src="{{ asset('/user/img/seblak.jpg') }}" class="card-img-top" alt="..." />
-          </a>
-          <div class="card-body">
-            <h5 class="card-subtitle">Seblak - Pedas Level 4</h5>
-            <p class="card-meta">Rp12.000</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="info-area padding-top-80px padding-bottom-45px">
+  <div class="arrow-separator"></div>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-4 responsive-column">
+              <div class="icon-box icon-layout-2 d-flex align-items-center">
+                  <div class="info-icon flex-shrink-0 bg-rgb radius-round-full">
+                      <img src="{{asset('user/img/browser.png')}}" class="w-50" alt="">
+                  </div><!-- end info-icon-->
+                  <div class="info-content">
+                      <h4 class="info__title">Fast Order</h4>
+                      <p class="info__desc">
+                          Proses order dengan langkah mudah, cepat, dan fast respon.
+                      </p>
+                  </div><!-- end info-content -->
+              </div><!-- end icon-box -->
+          </div><!-- end col-lg-4 -->
+          <div class="col-lg-4 col-4 responsive-column">
+              <div class="icon-box icon-layout-2 d-flex align-items-center">
+                  <div class="info-icon flex-shrink-0 bg-rgb-2 radius-round-full">
+                      <img src="{{asset('user/img/layout.png')}}" class="w-50" alt="">
+                  </div><!-- end info-icon-->
+                  <div class="info-content">
+                      <h4 class="info__title">Harga Murah</h4>
+                      <p class="info__desc">
+                          Dengan harga 10K anda sudah bisa mendapat makanan berbagai varian.
+                      </p>
+                  </div><!-- end info-content -->
+              </div><!-- end icon-box -->
+          </div><!-- end col-lg-4 -->
+          <div class="col-lg-4 col-4 responsive-column">
+              <div class="icon-box icon-layout-2 d-flex align-items-center">
+                  <div class="info-icon flex-shrink-0 bg-rgb-3 radius-round-full">
+                      <img src="{{asset('user/img/support.png')}}" class="w-50" alt="">
+                  </div><!-- end info-icon-->
+                  <div class="info-content">
+                      <h4 class="info__title">24 Jam Support</h4>
+                      <p class="info__desc">
+                        Kami Terbuka 24 Jam untuk kebutuhan lapar anda.
+                      </p>
+                  </div><!-- end info-content -->
+              </div><!-- end icon-box -->
+          </div><!-- end col-lg-4 -->
+      </div><!-- end row -->
+  </div><!-- end container -->
 </section>
-<!-- End Featured Product -->
 
 <section class="discount-area mt-auto">
   <div class="container">
@@ -156,7 +140,7 @@
                           <h2 class="sec__title mb-0 line-height-50 text-white">Discount 50% untuk setiap <br> Hari Jum'at</h2>
                       </div><!-- end section-heading -->
                       <div class="btn-box pt-4">
-                          <a href="#" class="theme-btn border-0">Pesan Sekarang <i class="la la-arrow-right ml-1"></i></a>
+                          <a href="{{route('user.promo')}}" class="theme-btn border-0">Pesan Sekarang <i class="la la-arrow-right ml-1"></i></a>
                       </div>
                   </div><!-- end discount-content -->
                   <div class="company-logo">
@@ -174,115 +158,76 @@
       <div class="row">
           <div class="col-lg-12">
               <div class="section-heading text-center">
-                  <h2 class="sec__title">Makanan Terlaris</h2>
+                  <h2 class="sec__title">Makanan Terbaru</h2>
               </div><!-- end section-heading -->
           </div><!-- end col-lg-12 -->
       </div><!-- end row -->
       <div class="row padding-top-60px">
-          <div class="col-lg-4 responsive-column">
-              <div class="card-item cruise-card">
-                  <div class="card-img">
-                    <a href="google.com">
-                      <img src="{{ asset('user/img/cruise-img.jpg') }}" alt="cruise-img">
-                    </a>
-                      <div class="card-body">
-                          <h3 class="card-title mb-0"><a href="cruise-details.html"><i class="la la-star"></i> Terlaris</a></h3>
-                      </div>
-                  </div>
-                  <div class="card-footer">
-                      <a href=""><h3 class="card-subtitle">Get Ready for Some Fun in the Sun</h3></a>
-                      <p class="card-meta">Rp12.000</p>
-                      <div class="btn-box padding-top-30px">
-                        <a href="https://wa.me/6285745974148?text=Halo%20Admin!%0ASaya%20pesan:%20*Seblak-Pedas%20Level%201*%0AHarga:%20*Rp12000*" class="theme-btn border-0">Pesan</a>
-                    </div>
-                  </div>
-              </div><!-- end card-item -->
-          </div><!-- end col-lg-6 -->
-          <div class="col-lg-4 responsive-column">
-              <div class="card-item cruise-card">
-                  <div class="card-img">
-                      <img src="{{asset('user/img/cruise-img2.jpg')}}" alt="cruise-img">
-                      <div class="card-body">
-                        <h3 class="card-title mb-0"><a href="cruise-details.html"><i class="la la-star"></i> Terlaris</a></h3>
-                      </div>
-                  </div>
-                  <div class="card-footer">
-                      <h3 class="card-subtitle">Explore the Culture and Beauty of Europe</h3>
-                      <p class="card-meta">Rp12.000</p>
-                      <div class="btn-box padding-top-30px">
-                      <a href="become-local-expert.html" class="theme-btn border-0">Pesan</a>
-                  </div>
-                  </div>
-              </div><!-- end card-item -->
-          </div><!-- end col-lg-6 -->
-          <div class="col-lg-4 responsive-column">
-              <div class="card-item cruise-card">
-                  <div class="card-img">
-                      <img src="{{asset('user/img/cruise-img3.jpg')}}" alt="cruise-img">
-                      <div class="card-body">
-                        <h3 class="card-title mb-0"><a href="cruise-details.html"><i class="la la-star"></i> Terlaris</a></h3>
-                      </div>
-                  </div>
-                  <div class="card-footer">
-                      <h3 class="card-subtitle">Family Fun Time</h3>
-                      <p class="card-meta">Rp12.000</p>
-                      <div class="btn-box padding-top-30px">
-                        <a href="become-local-expert.html" class="theme-btn border-0">Pesan</a>
-                    </div>
-                  </div>
-              </div><!-- end card-item -->
-          </div><!-- end col-lg-4 -->
-          <div class="col-lg-4 responsive-column">
-              <div class="card-item cruise-card">
-                  <div class="card-img">
-                      <img src="{{asset('user/img/cruise-img4.jpg')}}" alt="cruise-img">
-                      <div class="card-body">
-                        <h3 class="card-title mb-0"><a href="cruise-details.html"><i class="la la-star"></i> Terlaris</a></h3>
-                      </div>
-                  </div>
-                  <div class="card-footer">
-                      <h3 class="card-subtitle">Honeymoon Cruises</h3>
-                      <p class="card-meta">Rp12.000</p>
-                      <div class="btn-box padding-top-30px">
-                        <a href="become-local-expert.html" class="theme-btn border-0">Pesan</a>
-                    </div>
-                  </div>
-              </div><!-- end card-item -->
-          </div><!-- end col-lg-4 -->
-          <div class="col-lg-4 responsive-column">
-              <div class="card-item cruise-card">
-                  <div class="card-img">
-                      <img src="{{asset('user/img/cruise-img5.jpg')}}" alt="cruise-img">
-                      <div class="card-body">
-                        <h3 class="card-title mb-0"><a href="cruise-details.html"><i class="la la-star"></i> Terlaris</a></h3>
-                      </div>
-                  </div>
-                  <div class="card-footer">
-                      <h3 class="card-subtitle">Last-Minute Cruise Sale</h3>
-                      <p class="card-meta">Rp12.000</p>
-                      <div class="btn-box padding-top-30px">
-                        <a href="become-local-expert.html" class="theme-btn border-0">Pesan</a>
-                    </div>
-                  </div>
-              </div><!-- end card-item -->
-          </div><!-- end col-lg-4 -->
-          <div class="col-lg-4 responsive-column">
-            <div class="card-item cruise-card">
-                <div class="card-img">
-                    <img src="{{asset('user/img/cruise-img5.jpg')}}" alt="cruise-img">
-                    <div class="card-body">
-                      <h3 class="card-title mb-0"><a href="cruise-details.html"><i class="la la-star"></i> Terlaris</a></h3>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <h3 class="card-subtitle">Last-Minute Cruise Sale</h3>
-                    <p class="card-meta">Rp12.000</p>
+        @foreach ($produks as $no => $data)
+        <div class="col-lg-4 responsive-column">
+          <div class="card-item gallery-card">
+              <div class="card-img">
+                <a href="">
+                  <img src="{{ url('/gambar/'.$data->gambar) }}" alt="cruise-img">
+                </a>
+                  <div class="card-body">
+                    <h3 class="card-subtitle">{{ $data->nama_produk }} - {{ $data->varian }}</h3>
+                    <p class="card-meta">Rp{{ $data->harga }}</p>
                     <div class="btn-box padding-top-30px">
-                      <a href="become-local-expert.html" class="theme-btn border-0">Pesan</a>
+                      <button class="theme-btn border-0" data-toggle="modal" data-target="#modalPesan{{ $data->id }}">Pesan</button>
                   </div>
-                </div>
-            </div><!-- end card-item -->
-        </div><!-- end col-lg-4 -->
+                  </div>
+              </div>
+          </div><!-- end card-item -->
+      </div><!-- end col-lg-4 -->
+      <!-- Modal Pesan-->
+      <div class="modal fade" id="modalPesan{{ $data->id }}" tabindex="-1" aria-labelledby="modalPesan" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Silahkan Masukkan Data Diri</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        <!--FORM UPDATE VARIAN-->
+        <form action="send.php" method="post" target="_blank">
+        <div class="form-group">
+          <label for="">Nama</label>
+          <input type="text" class="form-control" name="nama"
+          value="">
+        </div>
+        <div class="form-group">
+          <label for="">Alamat</label>
+          <input type="text" class="form-control" name="alamat"
+          value="">
+        </div>
+        <div class="form-group">
+            <label for="">Pesanan</label>
+            <input type="text" class="form-control" name="pesanan"
+            value="{{ $data->nama_produk}} - {{ $data->varian}}" disabled>
+        </div>
+        <div class="form-group">
+          <label for="">Harga</label>
+          <input type="text" class="form-control" name="harga"
+          value="Rp{{ $data->harga}}" disabled>
+      </div>
+      <div class="form-group">
+          <label for="">Catatan</label>
+          <textarea class="form-control" name="catatan" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <input type="hidden"  name="noWA" value="6285745974148">
+        <button type="submit" name="submit" class="theme-btn border-0">Pesan Sekarang</button>
+        </form>
+        <!--END FORM Pesan-->
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- End Modal Pesan-->
+        @endforeach
+         
       </div><!-- end row -->
   </div><!-- end container -->
 </section>
@@ -308,8 +253,8 @@
       <div class="row padding-top-30px">
           <div class="col-lg-6">
               <div class="gallery-card">
-                  <a class="d-block" href="https://google.com">
-                      <img src="user/img/seblak.png">
+                  <a class="d-block" href="{{route('user.kategori')}}">
+                      <img src="{{asset('user/img/seblak.png')}}">
                   </a>
                   <div class="card-footer">
                     <h3 class="text-center">Seblak</h3>
@@ -318,8 +263,8 @@
           </div><!-- end col-lg-4 -->
           <div class="col-lg-6">
               <div class="gallery-card">
-                  <a class="d-block" href="images/img29.jpg">
-                      <img src="user/img/gado-gado.png">
+                  <a class="d-block" href="{{route('user.kategori')}}">
+                      <img src="{{asset('user/img/gado-gado.png')}}">
                   </a>
                   <div class="card-footer">
                     <h3 class="text-center">Gado - Gado</h3>
@@ -328,8 +273,8 @@
           </div><!-- end col-lg-4 -->
           <div class="col-lg-3">
               <div class="gallery-card">
-                  <a class="d-block" href="images/img30.jpg" >
-                      <img src="user/img/ikan-bakar.png">
+                  <a class="d-block" href="{{route('user.kategori')}}" >
+                      <img src="{{asset('user/img/ikan-bakar.png')}}">
                   </a>
                   <div class="card-footer">
                     <h3 class="text-center">Ikan Bakar</h3>
@@ -338,8 +283,8 @@
           </div><!-- end col-lg-4 -->
           <div class="col-lg-3">
               <div class="gallery-card">
-                  <a class="d-block" href="images/img31.jpg">
-                      <img src="user/img/ayam-panggang.png">
+                  <a class="d-block" href="{{route('user.kategori')}}">
+                      <img src="{{asset('user/img/ayam-panggang.png')}}">
                   </a>
                   <div class="card-footer">
                     <h3 class="text-center">Ayam Panggang</h3>
@@ -348,8 +293,8 @@
           </div><!-- end col-lg-4 -->
           <div class="col-lg-3">
               <div class="gallery-card">
-                  <a class="d-block" href="images/img32.jpg">
-                      <img src="user/img/cumi-baby.png">
+                  <a class="d-block" href="{{route('user.kategori')}}">
+                      <img src="{{asset('user/img/cumi-baby.png')}}">
                   </a>
                   <div class="card-footer">
                     <h3 class="text-center">Baby Cumi</h3>
@@ -358,8 +303,8 @@
           </div><!-- end col-lg-4 -->
           <div class="col-lg-3">
               <div class="gallery-card">
-                  <a class="d-block" href="images/img33.jpg">
-                      <img src="user/img/salad-buah.png">
+                  <a class="d-block" href="{{route('user.kategori')}}">
+                      <img src="{{asset('user/img/salad-buah.png')}}">
                   </a>
                   <div class="card-footer">
                     <h3 class="text-center">Selad Buah</h3>

@@ -52,6 +52,7 @@
   <!-- Footer -->
   @include('user.layouts.footer')
 
+  @stack('before-scripts')
   <!-- Start Script -->
   <script src="{{ asset('user/js/jquery-1.11.0.min.js') }}"></script>
   <script src="{{ asset('user/js/jquery-migrate-1.2.1.min.js') }}"></script>
@@ -59,6 +60,8 @@
   <script src="{{ asset('user/js/templatemo.js') }}"></script>
   <script src="{{ asset('user/js/custom.js') }}"></script>
   <!-- End Script -->
+
+  @stack('page-scripts')
 
   <!-- Template JS Files -->
 <script src={{ asset("js/jquery-3.4.1.min.js") }}></script>
@@ -80,6 +83,8 @@
 <script src={{ asset("js/line-chart.js") }}></script>
 <script src={{ asset("js/jquery.ripples-min.js") }}></script>
 <script src={{ asset("js/main.js") }}></script>
+@stack('after-scripts')
+
 </body>
 
 </html>

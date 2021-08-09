@@ -1,70 +1,256 @@
 @extends('user.layouts.master')
 
 @section('content')
-<section class="gallery-area mt-3">
+<!-- ================================
+    START KATEGORI SEBLAK
+================================= -->
+<section class="trending-area position-relative section-bg section-padding ">
     <div class="container">
-        <div class="row padding-top-30px">
-            <div class="col-lg-6">
-                <div class="gallery-card">
-                    <a class="d-block" href="https://google.com">
-                        <img src="{{asset('user/img/seblak.png')}}">
-                    </a>
-                    <div class="card-footer">
-                      <h3 class="text-center">Seblak</h3>
-                  </div>
-                </div><!-- end card-item -->
-            </div><!-- end col-lg-4 -->
-            <div class="col-lg-6">
-                <div class="gallery-card">
-                    <a class="d-block" href="images/img29.jpg">
-                        <img src="{{asset('user/img/gado-gado.png')}}">
-                    </a>
-                    <div class="card-footer">
-                      <h3 class="text-center">Gado - Gado</h3>
-                  </div>
-                </div><!-- end card-item -->
-            </div><!-- end col-lg-4 -->
-            <div class="col-lg-6">
-                <div class="gallery-card">
-                    <a class="d-block" href="images/img30.jpg" >
-                        <img src="{{asset('user/img/ikan-bakar.png')}}">
-                    </a>
-                    <div class="card-footer">
-                      <h3 class="text-center">Ikan Bakar</h3>
-                  </div>
-                </div><!-- end card-item -->
-            </div><!-- end col-lg-4 -->
-            <div class="col-lg-6">
-                <div class="gallery-card">
-                    <a class="d-block" href="images/img31.jpg">
-                        <img src="{{asset('user/img/ayam-panggang.png')}}">
-                    </a>
-                    <div class="card-footer">
-                      <h3 class="text-center">Ayam Panggang</h3>
-                  </div>
-                </div><!-- end card-item -->
-            </div><!-- end col-lg-4 -->
-            <div class="col-lg-6">
-                <div class="gallery-card">
-                    <a class="d-block" href="images/img32.jpg">
-                        <img src="{{asset('user/img/cumi-baby.png')}}">
-                    </a>
-                    <div class="card-footer">
-                      <h3 class="text-center">Baby Cumi</h3>
-                  </div>
-                </div><!-- end card-item -->
-            </div><!-- end col-lg-4 -->
-            <div class="col-lg-6">
-                <div class="gallery-card">
-                    <a class="d-block" href="images/img33.jpg">
-                        <img src="{{asset('user/img/salad-buah.png')}}">
-                    </a>
-                    <div class="card-footer">
-                      <h3 class="text-center">Selad Buah</h3>
-                  </div>
-                </div><!-- end card-item -->
-            </div><!-- end col-lg-4 -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2 class="sec__title">Seblak</h2>
+                </div><!-- end section-heading -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+        <div class="row padding-top-50px">
+            <div class="col-lg-12">
+                <div class="trending-carousel carousel-action">
+                    @foreach ($filterData as $no => $data)
+                    <div class="card-item gallery-card">
+                        <div class="card-img">
+                          <a href="">
+                            <img src="{{ url('/gambar/'.$data->gambar) }}" alt="cruise-img">
+                          </a>
+                            <div class="card-body">
+                              <h3 class="card-subtitle">{{ $data->nama_produk }} - {{ $data->varian }}</h3>
+                              <p class="card-meta">Rp{{ $data->harga }}</p>
+                              <div class="btn-box padding-top-30px">
+                                <button class="theme-btn border-0" data-toggle="modal" data-target="#modalPesan{{ $data->id }}">Pesan</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div><!-- end card-item -->
+                    @endforeach
+                    
+                </div><!-- end car-carousel -->
+            </div><!-- end col-lg-12 -->
         </div><!-- end row -->
     </div><!-- end container -->
-  </section>
+    <svg class="hero-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 10 0 0 A 90 59, 0, 0, 0, 100 0 L 100 10 Z"></path></svg>
+</section><!-- end trending-area -->
+<!-- ================================
+    END KATEGORI SEBLAK
+================================= -->
+
+<!-- ================================
+    START KATEGORI GADO GADO
+================================= -->
+<section class="trending-area position-relative section-bg section-padding ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2 class="sec__title">Gado Gado</h2>
+                </div><!-- end section-heading -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+        <div class="row padding-top-50px">
+            <div class="col-lg-12">
+                <div class="trending-carousel carousel-action">
+                    @foreach ($filterData2 as $no => $data)
+                    <div class="card-item gallery-card">
+                        <div class="card-img">
+                          <a href="">
+                            <img src="{{ url('/gambar/'.$data->gambar) }}" alt="cruise-img">
+                          </a>
+                            <div class="card-body">
+                              <h3 class="card-subtitle">{{ $data->nama_produk }} - {{ $data->varian }}</h3>
+                              <p class="card-meta">Rp{{ $data->harga }}</p>
+                              <div class="btn-box padding-top-30px">
+                                <button class="theme-btn border-0" data-toggle="modal" data-target="#modalPesan{{ $data->id }}">Pesan</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div><!-- end card-item -->
+                    @endforeach
+                    
+                </div><!-- end car-carousel -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+    <svg class="hero-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 10 0 0 A 90 59, 0, 0, 0, 100 0 L 100 10 Z"></path></svg>
+</section><!-- end trending-area -->
+<!-- ================================
+    END KATEGORI GADO GADO
+================================= -->
+
+<!-- ================================
+    START KATEGORI SALAD
+================================= -->
+<section class="trending-area position-relative section-bg section-padding ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2 class="sec__title">Salad</h2>
+                </div><!-- end section-heading -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+        <div class="row padding-top-50px">
+            <div class="col-lg-12">
+                <div class="trending-carousel carousel-action">
+                    @foreach ($filterData3 as $no => $data)
+                    <div class="card-item gallery-card">
+                        <div class="card-img">
+                          <a href="">
+                            <img src="{{ url('/gambar/'.$data->gambar) }}" alt="cruise-img">
+                          </a>
+                            <div class="card-body">
+                              <h3 class="card-subtitle">{{ $data->nama_produk }} - {{ $data->varian }}</h3>
+                              <p class="card-meta">Rp{{ $data->harga }}</p>
+                              <div class="btn-box padding-top-30px">
+                                <button class="theme-btn border-0" data-toggle="modal" data-target="#modalPesan{{ $data->id }}">Pesan</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div><!-- end card-item -->
+                    @endforeach
+                    
+                </div><!-- end car-carousel -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+    <svg class="hero-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 10 0 0 A 90 59, 0, 0, 0, 100 0 L 100 10 Z"></path></svg>
+</section><!-- end trending-area -->
+<!-- ================================
+    END KATEGORI SALAD
+================================= -->
+
+<!-- ================================
+    START KATEGORI SALAD
+================================= -->
+<section class="trending-area position-relative section-bg section-padding ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2 class="sec__title">Ikan Bakar</h2>
+                </div><!-- end section-heading -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+        <div class="row padding-top-50px">
+            <div class="col-lg-12">
+                <div class="trending-carousel carousel-action">
+                    @foreach ($filterData4 as $no => $data)
+                    <div class="card-item gallery-card">
+                        <div class="card-img">
+                          <a href="">
+                            <img src="{{ url('/gambar/'.$data->gambar) }}" alt="cruise-img">
+                          </a>
+                            <div class="card-body">
+                              <h3 class="card-subtitle">{{ $data->nama_produk }} - {{ $data->varian }}</h3>
+                              <p class="card-meta">Rp{{ $data->harga }}</p>
+                              <div class="btn-box padding-top-30px">
+                                <button class="theme-btn border-0" data-toggle="modal" data-target="#modalPesan{{ $data->id }}">Pesan</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div><!-- end card-item -->
+                    @endforeach
+                    
+                </div><!-- end car-carousel -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+    <svg class="hero-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 10 0 0 A 90 59, 0, 0, 0, 100 0 L 100 10 Z"></path></svg>
+</section><!-- end trending-area -->
+<!-- ================================
+    END KATEGORI SALAD
+================================= -->
+
+<!-- ================================
+    START KATEGORI SALAD
+================================= -->
+<section class="trending-area position-relative section-bg section-padding ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2 class="sec__title">Baby Cumi</h2>
+                </div><!-- end section-heading -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+        <div class="row padding-top-50px">
+            <div class="col-lg-12">
+                <div class="trending-carousel carousel-action">
+                    @foreach ($filterData5 as $no => $data)
+                    <div class="card-item gallery-card">
+                        <div class="card-img">
+                          <a href="">
+                            <img src="{{ url('/gambar/'.$data->gambar) }}" alt="cruise-img">
+                          </a>
+                            <div class="card-body">
+                              <h3 class="card-subtitle">{{ $data->nama_produk }} - {{ $data->varian }}</h3>
+                              <p class="card-meta">Rp{{ $data->harga }}</p>
+                              <div class="btn-box padding-top-30px">
+                                <button class="theme-btn border-0" data-toggle="modal" data-target="#modalPesan{{ $data->id }}">Pesan</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div><!-- end card-item -->
+                    @endforeach
+                    
+                </div><!-- end car-carousel -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+    <svg class="hero-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 10 0 0 A 90 59, 0, 0, 0, 100 0 L 100 10 Z"></path></svg>
+</section><!-- end trending-area -->
+<!-- ================================
+    END KATEGORI SALAD
+================================= -->
+
+<!-- ================================
+    START KATEGORI SALAD
+================================= -->
+<section class="trending-area position-relative section-bg section-padding ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2 class="sec__title">Kepiting Asam Manis</h2>
+                </div><!-- end section-heading -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+        <div class="row padding-top-50px">
+            <div class="col-lg-12">
+                <div class="trending-carousel carousel-action">
+                    @foreach ($filterData6 as $no => $data)
+                    <div class="card-item gallery-card">
+                        <div class="card-img">
+                          <a href="">
+                            <img src="{{ url('/gambar/'.$data->gambar) }}" alt="cruise-img">
+                          </a>
+                            <div class="card-body">
+                              <h3 class="card-subtitle">{{ $data->nama_produk }} - {{ $data->varian }}</h3>
+                              <p class="card-meta">Rp{{ $data->harga }}</p>
+                              <div class="btn-box padding-top-30px">
+                                <button class="theme-btn border-0" data-toggle="modal" data-target="#modalPesan{{ $data->id }}">Pesan</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div><!-- end card-item -->
+                    @endforeach
+                    
+                </div><!-- end car-carousel -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+    <svg class="hero-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 10 0 0 A 90 59, 0, 0, 0, 100 0 L 100 10 Z"></path></svg>
+</section><!-- end trending-area -->
+<!-- ================================
+    END KATEGORI SALAD
+================================= -->
+
 @endsection

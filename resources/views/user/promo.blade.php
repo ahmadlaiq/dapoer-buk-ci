@@ -45,7 +45,7 @@
                             <span class="badge text-white">- {{ $data->diskon }}%</span>
                         </div>
                         <div class="btn-box padding-top-30px">
-                            <a href="https://wa.me/6285745974148?text=Halo%20Admin%0ANama%20saya%20nadine" class="theme-btn border-0">Pesan</a>
+                            <a href="https://wa.me/6285745974148?text=Halo%20Admin!%0ASaya%20pesan:%20*{{ $data->produk }}*%0AHarga:%20*Rp12000*" class="theme-btn border-0">Pesan</a>
                         </div>
                     </div>
                 </div><!-- end card-item -->
