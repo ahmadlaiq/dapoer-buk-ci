@@ -60,7 +60,7 @@
                         <div class="form-group">
                           <p style="text-align: center">Gambar Produk</p> <br>
                           <div class="text-center"></div>
-                          <img height="400" width="400" src="{{ url('/gambar/'.$data->gambar) }}" alt="" style="display:block; margin:auto;">
+                          <img height="300" width="600" src="{{ url('/gambar/'.$data->gambar) }}" alt="" style="display:block; margin:auto;">
                       </div>
                       <div class="form-group">
                         <label for="formGroupExampleInput">Nama Akun</label>

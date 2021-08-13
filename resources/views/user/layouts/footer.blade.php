@@ -23,13 +23,12 @@
           <div class="col-md-4 pt-5">
               <h2 class="h2 text-light border-bottom pb-3 border-light">Metode Pembayaran</h2>
               <ul class="list-unstyled text-light footer-link-list">
-                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">03950 1000 55 0303</a></li>
-                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">Mandiri</a></li>
-                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">BRI</a></li>
-                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">BCA</a></li>
-                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">OVO</a></li>
-                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">Dana</a></li>
-                  <li><img src="{{asset('user/img/BNI.png')}}" width="" height="20" alt="" class="rounded"> <a class="text-light text-decoration-none" href="#">Shopepay</a></li>
+                  <li><img src="{{asset('gambar/1628672255_bca-logo.png')}}" width="90" height="40" alt="" class="rounded mr-2"> <a class="text-light text-decoration-none" href="#">33198269196817</a></li>
+                <li><img src="{{asset('gambar/1628672284_bni-logo.png')}}" width="90" height="40" alt="" class="rounded mr-2"> <a class="text-light text-decoration-none" href="#">13138249596812</a></li>
+                <li><img src="{{asset('gambar/1628672316_mandiri-logo.png')}}" width="90" height="40" alt="" class="rounded mr-2"> <a class="text-light text-decoration-none" href="#">53438243190819</a></li>
+                 <li><img src="{{asset('gambar/1628672385_dana-logo.png')}}" width="90" height="40" alt="" class="rounded mr-2"> <a class="text-light text-decoration-none" href="#">0812-3562-4746</a></li>
+                  <li><img src="{{asset('gambar/1628672411_ovo-logo.png')}}" width="90" height="40" alt="" class="rounded mr-2"> <a class="text-light text-decoration-none" href="#">0812-3562-4746</a></li>
+                   <li><img src="{{asset('gambar/1628672446_shopeepay-logo.png')}}" width="90" height="40" alt="" class="rounded mr-2"> <a class="text-light text-decoration-none" href="#">0812-3562-4746</a></li>
               </ul>
           </div>
 

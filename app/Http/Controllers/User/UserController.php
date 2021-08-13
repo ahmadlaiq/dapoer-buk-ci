@@ -20,17 +20,17 @@ class UserController extends Controller
         $term4 = 'Ikan Bakar';
         $term5 = 'Baby Cumi';
         $term6 = 'Kepiting Asam Manis';
-        $filterData = DB::table('produks')->where('nama_produk','LIKE','%'.$term1.'%')->get();
-        $filterData2 = DB::table('produks')->where('nama_produk','LIKE',$term2.'%')->get();
-        $filterData3 = DB::table('produks')->where('nama_produk','LIKE','%'.$term3.'%')->get();
-        $filterData4 = DB::table('produks')->where('nama_produk','LIKE','%'.$term4.'%')->get();
-        $filterData5 = DB::table('produks')->where('nama_produk','LIKE','%'.$term5.'%')->get();
-        $filterData6 = DB::table('produks')->where('nama_produk','LIKE','%'.$term6.'%')->get();
+        $filterData = DB::table('produks')->where('nama_produk','LIKE','%'.$term1.'%')->paginate(3);
+        $filterData2 = DB::table('produks')->where('nama_produk','LIKE',$term2.'%')->paginate(3);
+        $filterData3 = DB::table('produks')->where('nama_produk','LIKE','%'.$term3.'%')->paginate(3);
+        $filterData4 = DB::table('produks')->where('nama_produk','LIKE','%'.$term4.'%')->paginate(3);
+        $filterData5 = DB::table('produks')->where('nama_produk','LIKE','%'.$term5.'%')->paginate(3);
+        $filterData6 = DB::table('produks')->where('nama_produk','LIKE','%'.$term6.'%')->paginate(3);
         return view('user.kategori', compact('filterData', 'filterData2', 'filterData3', 'filterData4', 'filterData5', 'filterData6'));
     }
 
     public function Promo(){
-        $promoses = DB::table('promoses')->paginate(18);
+        $promoses = DB::table('promoses')->paginate(12);
         return view('user.promo', ['promoses'=> $promoses]);
     }
 
@@ -43,11 +43,6 @@ class UserController extends Controller
         return view('user.contact');
     }
 
-    public function DetailProduk(){
-        return view('user.detail-produk');
-    }
-
-    public function DetailPromo(){
-        return view('user.detail-promo');
-    }
+    
+    
 }

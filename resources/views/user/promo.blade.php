@@ -35,7 +35,7 @@
             <div class="col-lg-4 responsive-column">
                 <div class="card-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="hello word">
                     <div class="card-img">
-                        <img src="{{ asset('/user/img/seblak.jpg') }}" alt="about-img">
+                        <img src="{{ url('/gambar/'.$data->gambar) }}" alt="about-img">
                     </div>
                     <div class="card-body">
                         <h3 class="card-title mb-2">{{ $data->produk }}</h3>
@@ -45,13 +45,61 @@
                             <span class="badge text-white">- {{ $data->diskon }}%</span>
                         </div>
                         <div class="btn-box padding-top-30px">
-                            <a href="https://wa.me/6285745974148?text=Halo%20Admin!%0ASaya%20pesan:%20*{{ $data->produk }}*%0AHarga:%20*Rp12000*" class="theme-btn border-0">Pesan</a>
+                            <button class="theme-btn border-0" data-toggle="modal" data-target="#modalPesan{{ $data->id }}">Pesan</button>
                         </div>
                     </div>
                 </div><!-- end card-item -->
             </div><!-- end col-lg-4 -->
+            <!-- Modal Pesan-->
+      <div class="modal fade" id="modalPesan{{ $data->id }}" tabindex="-1" aria-labelledby="modalPesan" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Silahkan Masukkan Data Diri</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        <!--FORM UPDATE VARIAN-->
+        <form action="/send.php" method="post" target="_blank">
+        <div class="form-group">
+          <label for="">Nama</label>
+          <input type="text" class="form-control" name="nama"
+          value="">
+        </div>
+        <div class="form-group">
+          <label for="">Alamat</label>
+          <input type="text" class="form-control" name="alamat"
+          value="">
+        </div>
+        <div class="form-group">
+            <label for="">Pesanan</label>
+            <input type="text" class="form-control"
+            value="{{ $data->produk }}" disabled>
+        </div>
+        <div class="form-group">
+          <label for="">Harga</label>
+          <input type="text" class="form-control"
+          value="Rp{{ $data->sesudah_promosi}}" disabled>
+      </div>
+      <div class="form-group">
+          <label for="">Catatan</label>
+          <textarea class="form-control" name="catatan" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <input type="hidden"  name="noWA" value="6285745974148">
+      <input type="hidden"  name="produk" value="{{ $data->produk }}">
+      <input type="hidden"  name="harga" value="{{ $data->sesudah_promosi}}">
+        <button type="submit" name="submit" class="theme-btn border-0">Pesan Sekarang</button>
+        </form>
+        <!--END FORM Pesan-->
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- End Modal Pesan-->
             @endforeach
-            
+            {{ $promoses->links() }}
             {{-- <div class="col-lg-4 responsive-column">
                 <div class="card-item ">
                     <div class="card-img">

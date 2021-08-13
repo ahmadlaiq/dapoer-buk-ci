@@ -205,12 +205,12 @@
         </div>
         <div class="form-group">
             <label for="">Pesanan</label>
-            <input type="text" class="form-control" name="pesanan"
+            <input type="text" class="form-control"
             value="{{ $data->nama_produk}} - {{ $data->varian}}" disabled>
         </div>
         <div class="form-group">
           <label for="">Harga</label>
-          <input type="text" class="form-control" name="harga"
+          <input type="text" class="form-control"
           value="Rp{{ $data->harga}}" disabled>
       </div>
       <div class="form-group">
@@ -218,6 +218,8 @@
           <textarea class="form-control" name="catatan" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
       <input type="hidden"  name="noWA" value="6285745974148">
+      <input type="hidden"  name="produk" value="{{ $data->nama_produk}} - {{ $data->varian}}">
+      <input type="hidden"  name="harga" value="{{ $data->harga}}">
         <button type="submit" name="submit" class="theme-btn border-0">Pesan Sekarang</button>
         </form>
         <!--END FORM Pesan-->
