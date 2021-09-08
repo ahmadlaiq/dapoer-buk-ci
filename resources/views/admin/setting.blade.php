@@ -32,7 +32,6 @@
               <form method="POST" action="{{ route('admin.updatesetting', $data->id)}}" class="needs-validation MultiFile-intercepted" novalidate="" enctype="multipart/form-data">
                 @csrf
                 @method('put')
-                
                 <div class="form-group">
                   <label>Foto</label>
                   <input type="file" name="gambar" class="form-control">
